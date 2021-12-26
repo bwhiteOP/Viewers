@@ -1,0 +1,38 @@
+{
+  "name": "@onepacs/user",
+  "version": "0.0.1",
+  "description": "OnePacs User Management",
+  "author": "ONEPACS, LLC",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "dist/index.umd.js",
+  "module": "src/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc && cross-env NODE_ENV=production webpack --progress",
+    "dev": "tsc && cross-env NODE_ENV=development webpack --progress",
+    "start": "yarn dev --watch",
+    "test": "rimraf junit.xml && cross-env NODE_ENV=test jest",
+    "test:w": "yarn test --watchAll"
+  },
+  "peerDependencies": {
+    "@onepacs/core": "^0.0.1",
+    "@ohif/core": "^2.12.0",
+    "lodash": "^4.17.20"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "jest": "^26.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.2",
+    "webpack": "^4.35.2"
+  }
+}

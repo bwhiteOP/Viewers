@@ -26,6 +26,7 @@ import OpenIdConnectRoutes from './utils/OpenIdConnectRoutes.jsx';
 
 // TODO: Temporarily for testing
 import '@ohif/mode-longitudinal';
+import '@ohif/mode-onepacs';
 
 let commandsManager, extensionManager, servicesManager, hotkeysManager;
 

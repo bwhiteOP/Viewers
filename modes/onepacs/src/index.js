@@ -22,8 +22,8 @@ export default function mode({ modeConfiguration }) {
   return {
     // TODO: We're using this as a route segment
     // We should not be.
-    id: 'viewer',
-    displayName: 'Basic',
+    id: 'viewer2',
+    displayName: 'Onepacs',
     /**
      * Lifecycle hooks
      */
@@ -45,12 +45,6 @@ export default function mode({ modeConfiguration }) {
       ToolBarService.init(extensionManager);
       ToolBarService.addButtons(toolbarButtons);
       ToolBarService.createButtonSection('primary', [
-        'MeasurementTools',
-        'Zoom',
-        'WindowLevel',
-        'Pan',
-        'Capture',
-        'Layout',
         'MoreTools'
       ]);
     },
@@ -96,7 +90,8 @@ export default function mode({ modeConfiguration }) {
       'org.ohif.cornerstone',
       'org.ohif.measurement-tracking',
       'org.ohif.dicom-sr',
-      'onepacs-user-extension'
+      'onepacs-user-extension',
+      'onepacs-viewer-extension'
     ],
     hangingProtocols: [ohif.hangingProtocols],
     sopClassHandlers: [ohif.sopClassHandler, dicomsr.sopClassHandler],
@@ -104,4 +99,4 @@ export default function mode({ modeConfiguration }) {
   };
 }
 
-window.longitudinalMode = mode({});
+window.onepacsMode = mode({});

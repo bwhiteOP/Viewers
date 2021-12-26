@@ -89,7 +89,7 @@ function appInit(appConfigOrFunc, defaultExtensions) {
   // TODO: Remove this
   if (!appConfig.modes.length) {
     appConfig.modes.push(window.longitudinalMode);
-    // appConfig.modes.push(window.segmentationMode);
+    appConfig.modes.push(window.onepacsMode);
   }
 
   return {
