@@ -1,0 +1,26 @@
+/* 
+ * Copyright (c) 2020 OnePacs LLC, All rights reserved
+ * October 09, 2020 by Jay Liu
+ */
+
+.toolbar-button
+
+    fill: var(--default-color)
+
+    &:hover
+        fill: var(--hover-color)
+
+    // Disable the native tooltip that shows svg title
+    svg
+        pointer-events: none
+
+    &>.toolbar-button-label
+        white-space: nowrap
+
+    &.disabled
+        &>.toolbar-button-label, &>.toolbar-button-svgContainer
+            opacity: 0.5
+            cursor: not-allowed
+
+        &:hover
+            color: var(--text-secondary-color)

@@ -1,0 +1,53 @@
+/* 
+ * Copyright (c) 2020 OnePacs LLC, All rights reserved
+ * October 05, 2020 by Jay Liu
+ */
+
+.study-list-filter
+    background-color: var(--ui-gray-darker)
+
+    .column-patient
+        width: 30%;
+
+    .column-description
+        width: 50%;
+    .column-modalities
+        width: 10%;
+    .column-studyDate
+        width: 20%;
+
+    label
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 100%;
+        min-width: 6rem;
+        margin: 0 auto;
+        color: var(--table-text-primary-color);
+        font-weight: 400;
+        padding: 0.5rem 0.25rem;
+        user-select: none;
+
+        &:hover
+            color: var(--active-color);
+
+        &.active, &:active
+            color: var(--active-color);
+
+    input
+        height: 2rem
+        margin: 0 5px 15px 5px
+        padding: 0 10px
+        cursor: pointer
+        border: none
+        background-color: var(--input-background-color)
+        color: var(--input-placeholder-color)
+        font-size: 10pt
+        font-weight: normal
+        border-radius: 4px
+        width: calc(100% - 10px); /* Just use padding? */
+        transition(all 0.15s ease)
+        placeholder-color(var(--input-placeholder-color))
+
+        &:active, &:hover
+            background-color: var(--input-background-color)

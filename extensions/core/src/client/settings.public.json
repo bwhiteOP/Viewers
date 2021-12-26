@@ -1,0 +1,55 @@
+{
+  "public": {
+    "OnePacsWADOUrlPath": "/wadop",
+    "OnePacsViewReportUrlPath": "/views/reports/ViewReport.action",
+    "WebSocketClientPort": 443,
+    "WebSocketConnectionPoolSize": 3,
+    "SessionTimeoutInMin": 5,
+    "DebugMode": {
+      "enabled": false,
+      "printDownloadTime": true,
+      "printDecompressTime": true
+    },
+    "TelemetryLogging": {
+      "enabled": false,
+      "url": "",
+      "token": ""
+    },
+    "DecompressionSettings": {
+      "useFixedMemory": true,
+      "maxWebWorkers": 2
+    },
+    "ui": {
+      "cornerstoneRenderer": "webgl",
+      "leftSidebarOpen": true,
+      "showStackLoadingProgressBar": true,
+      "toolbarTooltipDelay": {
+        "show": 1500,
+        "hide": 0
+      }
+    },
+    "defaultMouseButtonTools": {
+      "left": "stackScroll",
+      "middle": "pan",
+      "right": "wwwc"
+    },
+    "defaultGestures": {
+      "zoomTouchPinch": {
+        "enabled": true
+      },
+      "panMultiTouch": {
+        "enabled": true,
+        "numPointers": 3
+      },
+      "stackScrollMultiTouch": {
+        "enabled": true,
+        "numPointers": 4
+      },
+      "doubleTapZoom": {
+        "enabled": true
+      }
+    },
+    "TestWADOUrl": "https://pacs.onepacs.com/wadop",
+    "TestViewReportUrl": ""
+  }
+}

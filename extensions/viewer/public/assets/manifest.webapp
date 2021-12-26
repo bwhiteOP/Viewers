@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "name": "OnePacs WebViewer 2",
+  "description": "OnePacs WebViewer 2",
+  "icons": {
+    "60": "/viewer2/assets/firefox_app_60x60.png",
+    "128": "/viewer2/assets/firefox_app_128x128.png",
+    "512": "/viewer2/assets/firefox_app_512x512.png"
+  }
+}

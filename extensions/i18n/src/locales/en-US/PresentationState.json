@@ -1,0 +1,6 @@
+{
+    "Title": "Presentation State",
+    "MessageCreateFailed": "Presentation State could not be created",
+    "MessageSaveSuccess": "Presentation State was successfully saved into OnePacs Server",
+    "MessageSaveFailed": "Presentation State could not be saved into OnePacs Server"
+}

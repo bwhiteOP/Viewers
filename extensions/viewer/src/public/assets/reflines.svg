@@ -1,0 +1,13 @@
+<svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px" y="0px"
+    viewBox="0 0 100 100"
+    style="enable-background:new 0 0 100 100;"
+    xml:space="preserve">
+
+    <title>freehand</title>
+    <path d="M33.6,47.1V3.1h-6.3v18.8l0,0v6.2l0,0v18.8H8.6v6.2h18.8v18.8l0,0v6.2l0,0v18.7h6.3V53.1 M66.4,53.1v43.8h6.2
+        V78.1l0,0v-6.2l0,0V53.1h18.8v-6.2H72.6V28.1l0,0v-6.2l0,0V3.1h-6.2v43.8l0,0V28.1v18.8 M66.4,53.1L66.4,53.1H33.6l0,0 M66.4,46.9
+        v6.2H33.6v-6.1 M66.4,53.1v18.8 M66.4,46.9l-32.7,0.2"/>
+</svg>

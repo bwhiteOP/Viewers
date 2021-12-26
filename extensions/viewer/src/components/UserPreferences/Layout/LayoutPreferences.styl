@@ -1,0 +1,41 @@
+/* 
+ * Copyright (c) 2020 OnePacs LLC, All rights reserved
+ * November 02, 2020 by Jay Liu
+ */
+
+
+.LayoutPreferences
+    display: flex
+    padding: 20px 0
+    width: 60%
+    margin: auto
+    text-align: center
+
+    .overflow-container
+        flex: 1 // fill the area
+        overflow-y: auto
+
+        .overflow-content
+            max-height: 500px
+
+    .layoutColumn
+        display: flex
+        flex-direction: column
+        flex-basis: 0
+        flex-grow: 1.5
+        margin: 0 5px
+
+        &.modality
+            flex-grow: 0.5
+
+        &.rows,.columns
+            flex-grow: 1
+
+    .layoutRow
+        display: flex
+        flex-direction: row
+        margin: 5px 0
+
+        &:not(.header)
+            .modality
+                padding-top: 5px

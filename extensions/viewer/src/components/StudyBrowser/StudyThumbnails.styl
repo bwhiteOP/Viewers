@@ -1,0 +1,49 @@
+/* 
+ * Copyright (c) 2021 OnePacs LLC, All rights reserved
+ * May 04, 2021 by PoyangLiu
+ */
+
+:root {
+  --box-border-color: transparent
+  --box-active-border-color: #131D29
+  --box-hover-background-color: #14191E
+  --box-hover-border-color: #2d4660
+}
+
+.study-thumbnails
+  position: relative
+  // required transformation to make inner fixed elements relative to this one
+  transform(scale(1))
+  .loadingTextDiv
+    padding: 25px
+    border-radius: 12px
+    position: absolute
+    opacity: 0
+    z-index: 100
+    background-color: var(--box-hover-background-color)
+    pointer-events: none
+    margin: 0
+
+  &.loading
+    .loadingTextDiv
+      height: 100%
+      left: 0
+      opacity: 0.75
+      right: 16px
+
+    .study-modality
+      opacity: 0.2
+
+  &:not(.active) .series-thumbnails
+    max-height: 0 !important
+
+  &.active
+    .study-modality
+      .study-modality-box
+        color: var(--primary-background-color)
+        &
+        &:before
+        &:after
+          background-color: var(--active-color)
+          border-color: var(--box-active-border-color)
+

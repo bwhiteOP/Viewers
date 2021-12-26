@@ -1,0 +1,61 @@
+/* 
+ * Copyright (c) 2020 OnePacs LLC, All rights reserved
+ * November 30, 2020 by Jay Liu
+ */
+
+.HotkeysPreferences
+    display: flex
+    padding: 20px 0px
+
+    .overflow-container
+        flex: 1 // fill the area
+        overflow-y: auto
+
+        .overflow-content
+            max-height: 500px
+
+    .hotkeyTable
+        display: flex
+        flex-direction: row
+        flex-basis: 0
+        flex-grow: 1.5
+
+        .hotkeyColumn
+            display: flex
+            flex-direction: column
+            flex-basis: 0
+            flex-grow: 1.5
+
+            .hotkeyHeader
+                display: flex
+                flex-direction: row
+                margin-bottom: 10px
+
+                .headerItemText
+                    flex-basis: 0
+                    flex-grow: 1.5
+                    padding: 5px 15px 5px 0
+
+            .hotkeyRow
+                display: flex
+
+                .wrapperHotkeyInput
+                    margin-bottom: 5px
+                    cursor: pointer
+                    display: flex
+                    flex-direction: column
+                    flex-basis: 0
+                    flex-grow: 1.5
+
+                .hotkeyLabel
+                    padding: 5px 15px 5px 0
+                    text-align: right
+                    flex-basis: 0
+                    flex-grow: 1.5
+
+                .preferencesInput
+                    text-transform: uppercase
+
+                .stateError
+                    .preferencesInput
+                        background-color: var(--state-error)

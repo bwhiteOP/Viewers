@@ -1,0 +1,49 @@
+/* 
+ * Copyright (c) 2020 OnePacs LLC, All rights reserved
+ * November 05, 2020 by Jay Liu
+ */
+
+.RadioButtonGroup
+    display:flex
+    flex-direction: column
+
+    .radio-button
+        cursor: pointer
+        margin-bottom: 5px
+        margin-left: 3px
+
+        // Hide native input element
+        .radio-button-input
+            display: none
+
+        // Style a custom circle with center pill
+        .wrapperText
+            display: block
+            position: relative
+            // shift the text left to make space for the radio circle
+            padding-left: 23px
+
+        // Outer circle
+        .wrapperText:before
+            display: block;
+            position: absolute;
+            background: #fff;
+            content: '';
+            height: 16px;
+            width: 16px;
+            left: 0;
+            top: 50%;
+            border-radius: 8px;
+            transform: translateY(-50%);
+
+        // Inner circle
+        input:checked + span:after
+            position: absolute
+            background: #3c5d80
+            content: ''
+            height: 10px
+            width: 10px;
+            left: 3px
+            top: 50%
+            border-radius: 5px
+            transform: translateY(-50%);

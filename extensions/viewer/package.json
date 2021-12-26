@@ -1,0 +1,54 @@
+{
+  "name": "@onepacs/viewer",
+  "version": "0.0.1",
+  "description": "OnePacs WebViewer extension",
+  "author": "ONEPACS, LLC",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "dist/index.umd.js",
+  "module": "src/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc && cross-env NODE_ENV=production webpack --progress",
+    "dev": "tsc && cross-env NODE_ENV=development webpack --progress",
+    "start": "yarn dev --watch",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:w": "yarn test --watchAll"
+  },
+  "peerDependencies": {
+    "@onepacs/core": "^0.0.1",
+    "@onepacs/cornerstone": "^0.0.1",
+    "@onepacs/i18n": "^0.0.1",
+    "@onepacs/user": "^0.0.1",
+    "@onepacs/presentation-state": "^0.0.1",
+    "@ohif/core": "^2.12.0",
+    "@ohif/i18n": "^0.53.0",
+    "@ohif/ui": "^1.8.0",
+    "@ohif/extension-cornerstone": "^2.10.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.31",
+    "react": "^16.8.6",
+    "react-cornerstone-viewport": "^2.3.9",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.5"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-redux": "^7.1.16",
+    "cross-env": "^7.0.2",
+    "jest": "^26.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.2",
+    "webpack": "^4.35.2"
+  }
+}

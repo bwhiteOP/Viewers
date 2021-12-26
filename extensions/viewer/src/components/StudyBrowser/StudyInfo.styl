@@ -1,0 +1,85 @@
+/* 
+ * Copyright (c) 2021 OnePacs LLC, All rights reserved
+ * May 28, 2021 by PoyangLiu
+ */
+
+$boxWidth = 50px
+$borderThickness = 2px
+$boxBorderRadius = 8px
+$nestingMargin = 6px
+$spacerX = 7px
+$spacerY = 12px
+
+.study-info
+  margin-right: 16px
+
+.study-modality
+  border: 1px solid var(--box-border-color)
+  border-radius: 12px
+  cursor: pointer
+  padding: $spacerY $spacerX ($spacerY - 1)
+  position: relative
+  transition($sidebarTransition)
+  z-index: 1
+
+  &:hover
+    background-color: var(--box-hover-background-color)
+    border-color: var(--box-hover-border-color)
+
+  .study-text
+    font-size: 13px
+    left: ($spacerX * 3) + $boxWidth + ($nestingMargin * 3)
+    line-height: 14px
+    position: absolute
+    right: $spacerX
+    top: $spacerY
+
+    .study-date
+      margin-top: 8px
+      color: var(--text-secondary-color)
+    .study-description
+      margin-top: 8px
+      color: var(--text-primary-color)
+
+  .study-modality-box
+    color: var(--text-secondary-color)
+    line-height: $boxWidth
+    margin-left: $nestingMargin * 2
+    margin-top: $nestingMargin * 2
+    position: relative
+    display: table
+    text-align: center
+
+    .study-modality-text
+      text-align: center
+      text-transform: uppercase
+      height: 100%
+      display: table-cell
+      vertical-align: middle
+      line-height: normal
+
+    &
+    &:before
+    &:after
+      border: $borderThickness solid var(--primary-background-color)
+      background-color: var(--box-background-color)
+      border-radius: $boxBorderRadius
+      height: $boxWidth + ($borderThickness * 2)
+      transition($sidebarTransition)
+      width: $boxWidth + ($borderThickness * 2)
+
+    &:before
+    &:after
+      display: block
+      content: ''
+      position: absolute
+
+    &:before
+      top: -($borderThickness + $nestingMargin)
+      left: -($borderThickness + $nestingMargin)
+      z-index: -1
+
+    &:after
+      top: -($borderThickness + ($nestingMargin * 2))
+      left: -($borderThickness + ($nestingMargin * 2))
+      z-index: -2

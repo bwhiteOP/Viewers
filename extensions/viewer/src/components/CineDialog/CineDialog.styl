@@ -1,0 +1,48 @@
+/* 
+ * Copyright (c) 2020 OnePacs LLC, All rights reserved
+ * November 19, 2020 by Jay Liu
+ */
+
+.OnePacsCineDialog
+    border-radius: 8px
+    background: var(--ui-gray-darkest)
+    color: var(--text-secondary-color)
+    position: absolute
+
+    .OHIFModal__header
+        padding: 5px
+        padding-left: 10px
+
+        .close-button
+            padding-right: 5px
+
+    .navigation
+        // This is a hack to add additional buttons without modifying the OHIF CineDialog
+        // The navigation buttons container is floated on top of the existing content
+        // and manually positioned.
+        float: right
+        z-index: 100
+        top: 10px
+
+        .btn
+            color: var(--text-secondary-color)
+            background-color: transparent
+            border: 0
+            border-radius: 4px
+            font-size: 15px
+            width: 45px
+            font-weight: normal
+            height: 37px
+            line-height: 37px
+            padding: 0 12px
+
+    .CineDialog
+        // border-radius will be re-apply at the outer level
+        border-radius: 0
+
+        .double-row-style
+            // Increase the width so we have room for navigation buttons
+            width: 350px
+
+        .btn:focus
+            outline: none
