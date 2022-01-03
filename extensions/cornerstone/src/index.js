@@ -60,4 +60,4 @@ export default {
   },
 };
 
-export { CornerstoneViewportDownloadForm };
+export { CornerstoneViewportDownloadForm, OHIFCornerstoneViewport };

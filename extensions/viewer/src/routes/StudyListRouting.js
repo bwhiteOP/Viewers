@@ -6,7 +6,7 @@
 // eslint-disable-next-line no-unused-vars
 import { types, routes, getAsync } from '@onepacs/core';
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { StudyList, LoadError } from '../components';
 
 /**
@@ -46,7 +46,7 @@ function StudyListRouting() {
 
     return (
         itemToOpen
-            ? <Redirect to={{
+            ? <Navigate replace to={{
                 pathname: routes.client.standalone,
                 state: { itemToOpen, userIdentity }
             }} />

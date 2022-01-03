@@ -7,7 +7,7 @@ import './AdvancedPreferences.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { TabFooter, useSnackbarContext } from '@ohif/ui';
+import {TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -16,7 +16,7 @@ import { Checkbox } from '../../FormElements';
 
 export function AdvancedPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [preferences, defaultPreferences, savePreferences] = useUserPreferences('advanced');
     const [user] = useUser();
 
@@ -30,15 +30,15 @@ export function AdvancedPreferences({ onClose }) {
             const newPreferences = state;
 
             await savePreferences(newPreferences);
-            snackbar.show({
+            /* snackbar.show({
                 type: 'success',
                 message: 'Advanced preferences saved.',
-            });
+            }); */
         } catch (error) {
-            snackbar.show({
+            /* snackbar.show({
                 type: 'error',
                 message: 'Advanced preferences failed to save successfully.',
-            });
+            }); */
         }
     }
 
@@ -50,10 +50,10 @@ export function AdvancedPreferences({ onClose }) {
                 message: 'Advanced preferences reset.'
             });
         } catch (error) {
-            snackbar.show({
+            /* snackbar.show({
                 type: 'error',
                 message: 'Advanced preferences failed to reset successfully.',
-            });
+            }); */
         }
     }
 

@@ -101,8 +101,8 @@ function ViewerLayout({
   const { show, hide } = useModal();
 
   const { hotkeyDefinitions, hotkeyDefaults } = hotkeysManager;
-  const versionNumber = process.env.VERSION_NUMBER;
-  const buildNumber = process.env.BUILD_NUM;
+  const versionNumber = 1; //process.env.VERSION_NUMBER;
+  const buildNumber = 2; //process.env.BUILD_NUM;
 
   const menuOptions = [
     {

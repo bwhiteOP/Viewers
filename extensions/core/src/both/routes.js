@@ -33,7 +33,7 @@ export const routes = {
              * @method GET
              * @response types.ApplicationInfo
              */
-            getAppInfo: '/api/getAppInfo',
+            getAppInfo: '/api/getAppInfojgujg',
 
             /**
              * Gets the content of the openStudiesRequest based on the requestId.

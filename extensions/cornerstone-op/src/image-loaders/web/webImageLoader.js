@@ -6,7 +6,7 @@
 // eslint-disable-next-line no-unused-vars
 import { types, EVENTS } from '@onepacs/core';
 import cornerstone from 'cornerstone-core';
-import cornerstoneWebImageLoader from 'cornerstone-web-image-loader';
+//import cornerstoneWebImageLoader from 'cornerstone-web-image-loader';
 
 /**
  * This module deals with loading images via HTTP and/or HTTPS
@@ -45,7 +45,7 @@ function loadImage(imageId, options = {}) {
     const promise = new Promise((resolve, reject) => {
         xhr.onload = function () {
             // @ts-ignore
-            const imagePromise = cornerstoneWebImageLoader.arrayBufferToImage(this.response);
+          /*  const imagePromise = cornerstoneWebImageLoader.arrayBufferToImage(this.response);
 
             imagePromise.then((image) => {
                 //  HV-138 Use viewport image id to create the image
@@ -53,7 +53,7 @@ function loadImage(imageId, options = {}) {
                 const imageObject = cornerstoneWebImageLoader.createImage(image, options.viewportImageId);
 
                 resolve(imageObject);
-            }, reject);
+            }, reject);*/
         };
 
         xhr.onerror = function (error) {
@@ -74,6 +74,6 @@ function loadImage(imageId, options = {}) {
 }
 
 // Inject the current cornerstone version into cornerstone web image loader
-cornerstoneWebImageLoader.external.cornerstone = cornerstone;
+//cornerstoneWebImageLoader.external.cornerstone = cornerstone;
 
 export default loadImage;

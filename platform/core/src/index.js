@@ -37,6 +37,18 @@ const hotkeys = {
 };
 
 const OHIF = {
+  redux: {actions: {
+      setMeasurements: function(){},
+      setActiveViewportSpecificData: function(){},
+      setLayout: function(){},
+      setTimepoints: function(){},
+      setStudyData: function(){},
+      setStudyDataAction: function(){},
+      setViewportSpecificData: function(){},
+      setExtensionData: function(){},
+    }},
+  cornerstone: {},
+  measurements: {tools: {}},
   MODULE_TYPES,
   //
   CommandsManager,

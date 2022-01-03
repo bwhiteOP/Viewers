@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { TextInput } from '@ohif/ui';
+import {Input} from '@ohif/ui';
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -58,7 +58,7 @@ export function LayoutRow({ layout, onChanged }) {
         const range = RANGES[fieldname];
         return (
             <>
-                <TextInput className="preferencesInput"
+                <Input className="preferencesInput"
                     type="number" min={range.min} max={range.max}
                     value={state[fieldname]}
                     data-fieldname={fieldname}

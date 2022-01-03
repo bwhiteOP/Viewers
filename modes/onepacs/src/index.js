@@ -89,9 +89,7 @@ export default function mode({ modeConfiguration }) {
       'org.ohif.default',
       'org.ohif.cornerstone',
       'org.ohif.measurement-tracking',
-      'org.ohif.dicom-sr',
-      'onepacs-user-extension',
-      'onepacs-viewer-extension'
+      'org.ohif.dicom-sr'
     ],
     hangingProtocols: [ohif.hangingProtocols],
     sopClassHandlers: [ohif.sopClassHandler, dicomsr.sopClassHandler],

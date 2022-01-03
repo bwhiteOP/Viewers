@@ -3,7 +3,7 @@
  * August 5, 2021 by Jay Liu
  */
 
-import { SimpleDialog } from '@ohif/ui';
+//import { SimpleDialog } from '@ohif/ui';
 
 export function getShowTextInputDialog(UIDialogService) {
 
@@ -18,7 +18,7 @@ export function getShowTextInputDialog(UIDialogService) {
             let dialogId = UIDialogService.create({
                 centralize: true,
                 isDraggable: false,
-                content: SimpleDialog.InputDialog,
+                content: <div></div>, //SimpleDialog.InputDialog,
                 useLastPosition: false,
                 showOverlay: true,
                 contentProps: {

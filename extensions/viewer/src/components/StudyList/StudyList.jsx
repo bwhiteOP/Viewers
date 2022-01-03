@@ -9,7 +9,7 @@ import './StudyList.styl';
 import { types } from '@onepacs/core';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDebounce } from '@ohif/ui';
+import { useDebounce } from '@hooks';
 import StudyListHeader from './StudyListHeader';
 import StudyListFilter from './StudyListFilter';
 import StudyListRow from './StudyListRow';

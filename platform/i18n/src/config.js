@@ -1,5 +1,5 @@
 const debugMode = !!(
-  process.env.NODE_ENV !== 'production' && process.env.REACT_APP_I18N_DEBUG
+  true || process.env.NODE_ENV !== 'production' && process.env.REACT_APP_I18N_DEBUG
 );
 
 const detectionOptions = {

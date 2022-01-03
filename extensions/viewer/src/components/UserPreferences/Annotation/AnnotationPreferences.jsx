@@ -7,7 +7,8 @@ import './AnnotationPreferences.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { TextInput, TabFooter, useSnackbarContext } from '@ohif/ui';
+import {Input} from '@ohif/ui';
+import {TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -17,7 +18,7 @@ const range = { min: 50, max: 1000 };
 
 export function AnnotationPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [preferences, defaultPreferences, savePreferences] = useUserPreferences('annotation');
 
     // local component states
@@ -31,37 +32,37 @@ export function AnnotationPreferences({ onClose }) {
             };
 
             await savePreferences(newPreferences);
-            snackbar.show({
+          /*  /* snackbar.show({
                 type: 'success',
                 message: 'Annotation preferences saved.',
-            });
+            }); */
         } catch (error) {
-            snackbar.show({
+       /*     /* snackbar.show({
                 type: 'error',
                 message: 'Annotation preferences failed to save successfully.',
-            });
+            }); */
         }
     }
 
     async function onResetPreferences() {
         try {
             await savePreferences(defaultPreferences);
-            snackbar.show({
+     /*       snackbar.show({
                 type: 'success',
                 message: 'Annotation preferences reset.'
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+       /*     /* snackbar.show({
                 type: 'error',
                 message: 'Annotation preferences failed to reset successfully.',
-            });
+            }); */
         }
     }
 
     return (
         <React.Fragment>
             <div className="AnnotationPreferences">
-                <TextInput className="preferencesInput"
+                <Input className="preferencesInput"
                     type="number" min={range.min} max={range.max}
                     label="Font sale of the text annotation (%)"
                     value={fontScale}

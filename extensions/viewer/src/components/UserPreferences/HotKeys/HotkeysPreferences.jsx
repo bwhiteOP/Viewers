@@ -7,7 +7,8 @@ import './HotkeysPreferences.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { useSnackbarContext, TabFooter } from '@ohif/ui';
+//import { useSnackbarContext } from '@ohif/ui';
+import { TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types, arrayUtils } from '@onepacs/core';
@@ -17,7 +18,7 @@ import { useHotkeys } from '../../../hooks';
 
 export function HotkeysPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [hotkeyDefinitions, hotkeyDefaults, saveHotkeys] = useHotkeys();
 
     // local component states
@@ -29,30 +30,30 @@ export function HotkeysPreferences({ onClose }) {
         try {
             await saveHotkeys(hotkeys);
 
-            snackbar.show({
+           /* snackbar.show({
                 message: 'Keyboard shortcuts preferences saved.',
                 type: 'success',
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+          /*  snackbar.show({
                 message: 'Keyboard shortcuts preferences failed to save successfully.',
                 type: 'error',
-            });
+            });*/
         }
     }
 
     async function onResetPreferences() {
         try {
             await saveHotkeys(convertToDictionary(hotkeyDefaults));
-            snackbar.show({
+           /* snackbar.show({
                 message: 'Keyboard shortcuts preferences reset.',
                 type: 'success',
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+         /*   snackbar.show({
                 message: 'Keyboard shortcuts preferences failed to reset successfully.',
                 type: 'error',
-            });
+            });*/
         }
     }
 

@@ -3,7 +3,7 @@ import { ErrorBoundary as ReactErrorBoundary } from 'react-error-boundary';
 import PropTypes from 'prop-types';
 import Modal from '../Modal';
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = true || process.env.NODE_ENV === 'production';
 
 const DefaultFallback = ({ error, componentStack, context, resetErrorBoundary, fallbackRoute }) => {
   const title = `Something went wrong${!isProduction && ` in ${context}`}.`;

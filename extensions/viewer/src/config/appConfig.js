@@ -18,6 +18,7 @@ import { getCornerstoneExtensionConfig } from '@onepacs/cornerstone';
 export function getAppConfig() {
     // Must load our settings before app starts
     return publicSettings.load().then(() => {
+        console.log('public url is', getPublicUrl());
         return {
             routerBasename: getPublicUrl(),
             extensions: extensions,

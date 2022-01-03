@@ -7,7 +7,7 @@ import './UserPreferences.styl';
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TabComponents } from '@ohif/ui';
+import { TabComponents } from "../tabComponents";
 
 import { GeneralPreferences } from './General';
 import { LayoutPreferences } from './Layout';

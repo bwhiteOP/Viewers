@@ -7,7 +7,8 @@ import './GeneralPreferences.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { TabFooter, useSnackbarContext } from '@ohif/ui';
+//import { useSnackbarContext } from '@ohif/ui';
+import {TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -16,7 +17,7 @@ import { Checkbox, RadioButtonGroup } from '../../FormElements';
 
 export function GeneralPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [preferences, defaultPreferences, savePreferences] = useUserPreferences('general');
 
     // local component states
@@ -29,15 +30,15 @@ export function GeneralPreferences({ onClose }) {
             const newPreferences = state;
 
             await savePreferences(newPreferences);
-            snackbar.show({
+            /* snackbar.show({
                 type: 'success',
                 message: 'General preferences saved.',
-            });
+            }); */
         } catch (error) {
-            snackbar.show({
+            /* snackbar.show({
                 type: 'error',
                 message: 'General preferences failed to save successfully.',
-            });
+            }); */
         }
     }
 
@@ -49,10 +50,10 @@ export function GeneralPreferences({ onClose }) {
                 message: 'General preferences reset.'
             });
         } catch (error) {
-            snackbar.show({
+            /* snackbar.show({
                 type: 'error',
                 message: 'General preferences failed to reset successfully.',
-            });
+            }); */
         }
     }
 

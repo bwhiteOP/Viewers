@@ -9,7 +9,8 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import { useTranslation } from 'react-i18next';
-import { TabFooter, useSnackbarContext } from '@ohif/ui';
+//import { useSnackbarContext } from '@ohif/ui';
+import { TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -22,7 +23,7 @@ import { MouseToolsetRow } from './MouseToolsetRow';
 
 export function MouseToolsetsPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [preferences, defaultPreferences, savePreferences] = useUserPreferences('mouseToolsets');
 
     // local component states
@@ -38,31 +39,31 @@ export function MouseToolsetsPreferences({ onClose }) {
             };
 
             await savePreferences(newPreferences);
-            snackbar.show({
+           /* snackbar.show({
                 message: 'Mouse toolsets preferences saved.',
                 type: 'success',
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+           /* snackbar.show({
                 message: 'Mouse toolsets preferences failed to save successfully.',
                 type: 'error',
-            });
+            });*/
         }
     }
 
     async function onResetPreferences() {
         try {
             await savePreferences(defaultPreferences);
-            snackbar.show({
+         /*   snackbar.show({
                 message: 'Mouse toolsets preferences reset.',
                 type: 'success',
-            });
+            });*/
             onClose();
         } catch (error) {
-            snackbar.show({
+         /*   snackbar.show({
                 message: 'Mouse toolsets preferences failed to reset successfully.',
                 type: 'error',
-            });
+            });*/
         }
     }
 

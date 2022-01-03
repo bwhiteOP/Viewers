@@ -3,7 +3,7 @@
  * November 06, 2020 by Jay Liu
  */
 
-import { redux as ohifRedux } from '@ohif/core';
+//import { redux as ohifRedux } from '@ohif/core';
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -14,7 +14,7 @@ import { retrieveUserPreferences as loadAsync } from '../retrieveUserPreferences
 
 import { getUser } from '../../user/redux/selectors';
 
-const { actions: ohifActions } = ohifRedux;
+//const { actions: ohifActions } = ohifRedux;
 
 /** @type {Promise<types.UserPreferences>} */
 let lastDispatch;
@@ -68,9 +68,9 @@ const loadUserPreferences = () => {
             dispatch(loadUserPreferencesSuccess(preferences));
 
             const windowLevelData = convertToWindowLevelData(preferences.wlPresets);
-            if (windowLevelData)
+           /* if (windowLevelData)
                 dispatch(ohifActions.setUserPreferences({ windowLevelData }));
-
+*/
             // server may only returns a partial set.
             // get the state again so we get the full user preferences
             const userPreferencesState = getUserPreferencesState(getState());
@@ -112,8 +112,8 @@ const saveUserPreferences = preferences => {
             dispatch(saveUserPreferencesSuccess(preferences));
 
             const windowLevelData = convertToWindowLevelData(preferences.wlPresets);
-            if (windowLevelData)
-                dispatch(ohifActions.setUserPreferences({ windowLevelData }));
+           /* if (windowLevelData)
+                dispatch(ohifActions.setUserPreferences({ windowLevelData }));*/
         } catch (error) {
             dispatch(saveUserPreferencesFailed(error));
             throw error;

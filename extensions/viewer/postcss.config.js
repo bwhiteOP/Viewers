@@ -3,4 +3,4 @@
  * September 01, 2020 by Jay Liu
  */
 
-module.exports = require('../../postcss.base.js');
+module.exports = require('./postcss.base.js');

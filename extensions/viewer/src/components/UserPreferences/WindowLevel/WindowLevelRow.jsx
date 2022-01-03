@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { TextInput } from '@ohif/ui';
+import { Input } from '@ohif/ui';
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -36,7 +36,7 @@ export function WindowLevelRow({ rowKey, wlPreset, onChanged }) {
     function renderInput(fieldname, type = 'number') {
         return (
             <>
-                <TextInput className="preferencesInput"
+                <Input className="preferencesInput"
                     type={type}
                     value={state[fieldname]}
                     data-fieldname={fieldname}

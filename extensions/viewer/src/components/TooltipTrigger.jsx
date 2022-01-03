@@ -19,14 +19,14 @@ function TooltipTrigger(props) {
 
     const cachedSettings = publicSettings.cached();
     return (
-        <OverlayTrigger
+        <div
             placement={placement}
             delay={cachedSettings.ui.toolbarTooltipDelay.show || 1500}
             delayHide={cachedSettings.ui.toolbarTooltipDelay.hide || 0}
             overlay={getTooltipOverlay(props.tooltip, placement)}
         >
             {children}
-        </OverlayTrigger>
+        </div>
     )
 }
 

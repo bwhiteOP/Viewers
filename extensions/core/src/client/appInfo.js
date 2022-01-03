@@ -27,7 +27,9 @@ export const appInfo = {
  * Asynchronously fetch the application information from server package.json file
  */
 async function updateAppInfo() {
+
     /** @type {{ result?: ApplicationInfo, error?: Error }} */
+    /*
     const { result } = await getAsync(routes.server.api.getAppInfo);
 
     if (result) {
@@ -35,5 +37,5 @@ async function updateAppInfo() {
         appInfo.version = result.version;
         appInfo.description = result.description;
         appInfo.author = result.author;
-    }
+    }*/
 }

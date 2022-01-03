@@ -7,7 +7,8 @@ import './LayoutPreferences.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { TabFooter, useSnackbarContext } from '@ohif/ui';
+//import { useSnackbarContext } from '@ohif/ui';
+import {TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -16,7 +17,7 @@ import { LayoutRow } from './LayoutRow';
 
 export function LayoutPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [preferences, defaultPreferences, savePreferences] = useUserPreferences('layout');
 
     // local component states
@@ -28,30 +29,30 @@ export function LayoutPreferences({ onClose }) {
             const newPreferences = layouts;
 
             await savePreferences(newPreferences);
-            snackbar.show({
+          /*  snackbar.show({
                 message: 'Layout preferences saved.',
                 type: 'success',
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+          /*  snackbar.show({
                 message: 'Layout preferences failed to save successfully.',
                 type: 'error',
-            });
+            });*/
         }
     }
 
     async function onResetPreferences() {
         try {
             await savePreferences(defaultPreferences);
-            snackbar.show({
+          /*  snackbar.show({
                 message: 'Layout preferences reset.',
                 type: 'success',
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+           /* snackbar.show({
                 message: 'Layout preferences failed to reset successfully.',
                 type: 'error',
-            });
+            });*/
         }
     }
 

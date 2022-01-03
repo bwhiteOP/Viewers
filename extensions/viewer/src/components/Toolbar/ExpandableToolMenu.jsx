@@ -6,7 +6,7 @@
 import './ExpandableToolMenu.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { OverlayTrigger, Tooltip } from '@ohif/ui';
+import {  Tooltip } from '@ohif/ui';
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -34,36 +34,7 @@ function ExpandableToolMenu(props) {
     }
 
     return (
-        <OverlayTrigger
-            key="menu-button"
-            trigger="click"
-            placement="bottom"
-            rootClose={true}
-            handleHide={onOverlayHide}
-            onClick={onExpandableToolClick}
-            overlay={
-                <Tooltip
-                    placement="bottom"
-                    className="tooltip-toolbar-overlay"
-                    id={`${Math.random()}_tooltip-toolbar-overlay}`}
-                >
-                    {popoutOverlayButtonComponents}
-                </Tooltip>
-            }
-        >
-            <ToolbarButton
-                key="menu-button"
-                id={props.id}
-                type="tool"
-                label={activeLabel}
-                icon={props.icon}
-                tooltip={props.tooltip}
-                className={'toolbar-button expandableToolMenu'}
-                isActive={isActive}
-                isExpandable={true}
-                isExpanded={state.isExpanded}
-            />
-        </OverlayTrigger>
+        <div/>
     );
 }
 

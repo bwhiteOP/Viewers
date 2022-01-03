@@ -7,7 +7,8 @@ import './SuvPreferences.styl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { TabFooter, useSnackbarContext } from '@ohif/ui';
+//import { useSnackbarContext } from '@ohif/ui';
+import { TabFooter} from "../../tabComponents";
 
 // eslint-disable-next-line no-unused-vars
 import { types } from '@onepacs/core';
@@ -16,7 +17,7 @@ import { Checkbox } from '../../FormElements';
 
 export function SuvPreferences({ onClose }) {
     const { t } = useTranslation('UserPreferencesModal');
-    const snackbar = useSnackbarContext();
+    //const snackbar = useSnackbarContext();
     const [preferences, defaultPreferences, savePreferences] = useUserPreferences('suv');
 
     // local component states
@@ -29,30 +30,30 @@ export function SuvPreferences({ onClose }) {
             const newPreferences = state;
 
             await savePreferences(newPreferences);
-            snackbar.show({
+            /* snackbar.show({
                 type: 'success',
                 message: 'SUV preferences saved.',
-            });
+            }); */
         } catch (error) {
-            snackbar.show({
+            /* snackbar.show({
                 type: 'error',
                 message: 'SUV preferences failed to save successfully.',
-            });
+            }); */
         }
     }
 
     async function onResetPreferences() {
         try {
             await savePreferences(defaultPreferences);
-            snackbar.show({
+            /*snackbar.show({
                 type: 'success',
                 message: 'SUV preferences reset.'
-            });
+            });*/
         } catch (error) {
-            snackbar.show({
+            /* snackbar.show({
                 type: 'error',
                 message: 'SUV preferences failed to reset successfully.',
-            });
+            }); */
         }
     }
 

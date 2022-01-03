@@ -21,8 +21,9 @@ module.exports = (env, argv) => {
       chunks: false,
       chunkModules: false,
       modules: false,
-      children: false,
+      children: true,
       warnings: true,
+      errorDetails: true,
     },
     optimization: {
       minimize: true,

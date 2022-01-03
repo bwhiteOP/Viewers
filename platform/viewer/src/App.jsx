@@ -26,7 +26,6 @@ import OpenIdConnectRoutes from './utils/OpenIdConnectRoutes.jsx';
 
 // TODO: Temporarily for testing
 import '@ohif/mode-longitudinal';
-import '@ohif/mode-onepacs';
 
 let commandsManager, extensionManager, servicesManager, hotkeysManager;
 
@@ -96,6 +95,15 @@ function App({ config, defaultExtensions }) {
     </CombinedProviders>
   );
 }
+
+window.ohif = window.ohif || {};
+window.ohif.app = {
+  commandsManager,
+  hotkeysManager,
+  servicesManager,
+  extensionManager
+};
+
 
 App.propTypes = {
   config: PropTypes.oneOfType([

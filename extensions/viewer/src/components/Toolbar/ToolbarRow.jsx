@@ -7,7 +7,7 @@ import './ToolbarRow.styl';
 // @ts-ignore
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RoundedButtonGroup } from '@ohif/ui';
+import { ButtonGroup } from '@ohif/ui';
 import {
     getButtonComponents,
     runCommand,
@@ -53,7 +53,7 @@ export function ToolbarRow(props) {
             <Logo />
 
             <div className="leftButtonGroup">
-                <RoundedButtonGroup
+                <ButtonGroup
                     options={leftButtonGroup}
                     value={props.selectedLeftPanel || ''}
                     onValueChanged={props.selectLeftPanel}
@@ -66,7 +66,7 @@ export function ToolbarRow(props) {
 
             <div className="rightButtonGroup" >
                 {rightButtonGroup.length && (
-                    <RoundedButtonGroup
+                    <ButtonGroup
                         options={rightButtonGroup}
                         value={props.selectedRightPanel || ''}
                         onValueChanged={props.selectRightPanel}

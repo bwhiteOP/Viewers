@@ -1,0 +1,23 @@
+/**
+ * Base Typescript configuration.
+ * This is used for type checking only during development, and to generate package type declaration.
+ * It is not use during run-time.
+ * See https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html
+ */
+ {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "checkJs": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "jsx": "react"
+  }
+}

@@ -1,3 +1,4 @@
+const stylusToJavaScriptRule = require('./rules/stylusToJavaScript.js');
 // ~~ ENV
 const dotenv = require('dotenv');
 //
@@ -66,6 +67,7 @@ module.exports = (env, argv, { SRC_DIR, DIST_DIR }) => {
           },
         },
         cssToJavaScript,
+          stylusToJavaScriptRule
       ],
     },
     resolve: {
@@ -125,10 +127,12 @@ module.exports = (env, argv, { SRC_DIR, DIST_DIR }) => {
 
   if (isProdBuild) {
     config.optimization.minimizer = [
+      (compiler) => {
       new TerserJSPlugin({
         parallel: true,
         terserOptions: {},
-      }),
+      }).apply(compiler);
+      },
     ];
 
     /*config.plugins.push(

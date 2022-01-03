@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import cornerstoneTools from 'cornerstone-tools';
 
-import { CineDialog as OhifCineDialog } from '@ohif/ui';
+import { CinePlayer as OhifCineDialog } from '@ohif/ui';
 
 import { getApp } from '../../ohif';
 import { Icon } from '../Icon';
